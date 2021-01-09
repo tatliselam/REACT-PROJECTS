@@ -1,9 +1,11 @@
 import React from 'react';
 
 class Button extends React.Component {
-	render() {
+
+render() {
+	
 		return (
-			<button>Refresh
+			<button className ={this.props.isLight(this.props.color)?'light-button':'dark-button'} onClick = {this.props.randomColor}>Refresh
 				{this.props.children}
 			</button>
 		);
